@@ -13,7 +13,7 @@ public partial class _1Viewer : System.Web.UI.Page
         //create a new instance of clsCustomer
         clsCustomer ACustomer = new clsCustomer();
         //get the data from session object
-        ACustomer = (clsCustomer)Session["AnCustomer"];
+        ACustomer = (clsCustomer)Session["ACustomer"];
         //display the customer first name for this entry
         Response.Write(ACustomer.FirstName);
         //display the customer last name for this entry
