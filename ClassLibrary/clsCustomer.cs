@@ -190,21 +190,34 @@ namespace ClassLibrary
 
         public bool Find(int CustomerId)
         {
-            //set the private data members to the test data value
-            mCustomerId = 21;
-            mFirstName = "Test FirstName";
-            mLastName = "Test LastName";
-            mEmail = "Test Email";
-            mStreet = "Test Street";
-            mFlat = "Test Flat";
-            mCity = "Test City";
-            mPostcode = "XXX XXX";
-            mCountry = "Test Country";
-            mDateAdded = Convert.ToDateTime("16/9/2015");
-            mActive = true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the customerid  to search for
+            DB.AddParameter("@CustomerId", CustomerId);
+            //execute the stored procedure
+            DB.Execute("sproc.tblCustomer_FilterByCustomerId");
+            //if one record is found
+            if (DB.Count == 1)
+            {
+                mCustomerId = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerId"]);
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
+                mStreet = Convert.ToString(DB.DataTable.Rows[0]["Street"]);
+                mFlat = Convert.ToString(DB.DataTable.Rows[0]["Flat"]);
+                mCity = Convert.ToString(DB.DataTable.Rows[0]["City"]);
+                mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
+                mCountry = Convert.ToString(DB.DataTable.Rows[0]["Country"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
 
-            //always return true
-            return true;
+                //always return true
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

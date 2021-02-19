@@ -153,7 +153,7 @@ namespace Testing1
             //Boolean variable to store the result of validation
             Boolean Found = false;
             //some test data to use with the method
-            int CustomerId = 2;
+            int CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //test if the result is true
@@ -170,7 +170,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the address no
@@ -191,7 +191,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -213,7 +213,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -235,7 +235,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 AddressNo = 21;
+            Int32 AddressNo = 1;
             //invoke the method
             Found = ACustomer.Find(AddressNo);
             //check the property
@@ -256,7 +256,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 AddressNo = 21;
+            Int32 AddressNo = 1;
             //invoke the method
             Found = ACustomer.Find(AddressNo);
             //check the property
@@ -277,7 +277,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -299,7 +299,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -320,7 +320,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -342,7 +342,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -364,7 +364,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
@@ -386,7 +386,7 @@ namespace Testing1
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 CustomerId = 21;
+            Int32 CustomerId = 1;
             //invoke the method
             Found = ACustomer.Find(CustomerId);
             //check the property
