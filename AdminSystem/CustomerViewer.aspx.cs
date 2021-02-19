@@ -11,24 +11,24 @@ public partial class _1Viewer : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //create a new instance of clsCustomer
-        clsCustomer AnCustomer = new clsCustomer();
+        clsCustomer ACustomer = new clsCustomer();
         //get the data from session object
-        AnCustomer = (clsCustomer)Session["AnCustomer"];
+        ACustomer = (clsCustomer)Session["AnCustomer"];
         //display the customer first name for this entry
-        Response.Write(AnCustomer.FirstName);
+        Response.Write(ACustomer.FirstName);
         //display the customer last name for this entry
-        Response.Write(AnCustomer.LastName);
+        Response.Write(ACustomer.LastName);
         //display the customer email for this entry
-         Response.Write(AnCustomer.Email);
+         Response.Write(ACustomer.Email);
         //display the customer Street for this entry
-        Response.Write(AnCustomer.Street);
+        Response.Write(ACustomer.Street);
         //display the customer flat for this entry
-        Response.Write(AnCustomer.Flat);
+        Response.Write(ACustomer.Flat);
         //display the customer city for this entry
-        Response.Write(AnCustomer.City);
+        Response.Write(ACustomer.City);
         //display the customer postcode for this entry
-        Response.Write(AnCustomer.Postcode);
+        Response.Write(ACustomer.Postcode);
         //display the customer country for this entry
-        Response.Write(AnCustomer.Country);
+        Response.Write(ACustomer.Country);
     }
 }
