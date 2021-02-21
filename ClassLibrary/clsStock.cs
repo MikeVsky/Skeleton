@@ -9,4 +9,6 @@
         public double Price { get; set; }
         public int SneakerId { get; set; }
     }
+
+    
 }
