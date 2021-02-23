@@ -90,5 +90,125 @@ namespace TestingStock
             Assert.AreEqual(AStockUnit.SneakerId, TestData);
             
         }
+
+        public void FindMethodOk()
+        {
+            //Create instance of class we testing
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to store results of validation
+            Boolean Found = false;//Initialisation
+            //Create test data
+            Int32 SneakerId = 3;
+            Found = AStockUnit.Find(SneakerId);
+            //Test to see if reult is true
+            Assert.IsTrue(Found);
+        }
+         
+        public void TestSneakerIdFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.SneakerId != 3)
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+
+        public void TestSneakerDescriptionFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.SneakerDescription != "Test description")
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+
+        public void TestSneakerColourFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.SneakerColour != "Red")
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+
+        public void TestSneakerSizeFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.SneakerSize != 8)
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+
+        public void TestPriceFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.Price != 124.99)
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+
+
     }
 }
