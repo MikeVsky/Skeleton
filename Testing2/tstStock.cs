@@ -16,7 +16,7 @@ namespace TestingStock
             Assert.IsNotNull(AStockUnit);
         }
 
-        public void ActivePropertyOk()
+        public void AvailablePropertyOk()
         {
             //create an instance of the class we want to create
             clsStock AStockUnit = new clsStock();
@@ -209,6 +209,29 @@ namespace TestingStock
             Assert.IsTrue(Ok);
         }
 
+        public void TestAvailableFound()
+        {
+            //create an instance of the class we want to create
+            clsStock AStockUnit = new clsStock();
+            //Boolean variable to result of search(placeholder)
+            Boolean Found = false;
+            //Boolean variable to record if data is ok
+            Boolean Ok = true;
+            // Create test data
+            Int32 SneakerId = 3;
+            //invoke method
+            Found = AStockUnit.Find(SneakerId);
+            //check SneakerId
+            if (AStockUnit.Available != true)
+            {
+                Ok = false;
+            }
+            //test to see if result is correct
+            Assert.IsTrue(Ok);
+        }
+    }
+
+
 
     }
-}
+
