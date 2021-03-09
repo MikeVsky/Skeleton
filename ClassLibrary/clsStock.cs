@@ -84,6 +84,7 @@ namespace ClassLibrary
                 mPrice = value;
             }
         }
+        private int mSneakerId;
         public int SneakerId
         {
             get
@@ -97,29 +98,35 @@ namespace ClassLibrary
                 mSneakerId = value;
             }
         }
-            
+
 
         public bool Find(int SneakerId)
         {
-            //set private data member to test data value
-            mSneakerId = 3;
-
-            mSneakerDescription = "Test Description";
-
-            mSneakerColour = "Red";
-
-            mSneakerSize = 8;
-
-            mPrice = 124.99;
-
-            mAvailable = true;
-
-            //always return true
-            return true;
+            //Create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for sneaker id to search for
+            DB.AddParameter("@SneakerId", SneakerId);
+            //execute the stored procedure
+            DB.Execute("sproc_tblSneaker_FilterByAddressNo");
+            //There should either be 1 or 0 records found
+            if (DB.Count == 1)
+            {
+                //copy the data from database to private data members
+                mSneakerId = Convert.ToInt32(DB.DataTable.Rows[0][1]);
+                mSneakerDescription = Convert.ToString(DB.DataTable.Rows[0]["Nike Air Force 1"]);
+                mSneakerColour = Convert.ToString(DB.DataTable.Rows[0]["White"]);
+                mSneakerSize = Convert.ToInt32(DB.DataTable.Rows[0][8]);
+                mPrice = Convert.ToDecimal(DB.DataTable.Rows[0][79.99]);
+                mAvailable = Convert.ToBoolean(DB.DataTable.Rows[0][true]);
+                //return that everything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
-
-        private Int32 mSneakerId;
-    }
-
+       
     
-}
